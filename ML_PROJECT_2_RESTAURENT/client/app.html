@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Revenue Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<div class = "heading">
+    <h1>Monthly Revenue Prediction</h1>
+</div>
+<form class="form" id="myForm" onsubmit="return validateForm()">
+    <h2>Visited Customers</h2>
+    <input class="area" type="text" id="uiCustomer" class="floatLabel" name="customer" value="" placeholder="No of customer visited" min="1" required>
+    <h2>Menu Price</h2>
+    <input class="area" type="text" id="uiMenuPrice" class="floatLabel" name="uiMenuPrice" value="" placeholder="Avg menu price (in Rs.)" required>
+    <h2>Marketing Spend</h2>
+    <input class="area" type="text" id="uiMarketingSpend" class="floatLabel" name="uiMarketingSpend" value="" placeholder="Marketing spend in the month (in Rs.)" required>
+    
+    <h2>Cuisine Type</h2>
+    <div>
+        <select class="cuisine_type" name="" id="cuisine_type" required>
+            <option value="" disabled="disabled" selected="selected">Choose Cuisine Type</option>
+            <option>A</option>
+            <option>B</option>
+        </select>
+    </div>
+
+    <button class="submit" type="submit">Estimate Revenue</button>
+    <div id="uiEstimatedRevenue" class="result"><h2></h2></div>
+</form>
+
+<script>
+    function validateForm() {
+        if (document.getElementById("uiCustomer").value === "") {
+            alert("Please enter the number of customers.");
+            return false;
+        }
+        if (document.getElementById("uiMenuPrice").value === "") {
+            alert("Please enter the menu price.");
+            return false;
+        }
+        if (document.getElementById("uiMarketingSpend").value === "") {
+            alert("Please enter the marketing spend.");
+            return false;
+        }
+
+        // Call onClickedEstimateRevenue if form is valid
+        onClickedEstimateRevenue();
+        return false; 
+    }
+</script>
+
+</body>
+</html>
