@@ -1,0 +1,24 @@
+
+
+############################-------------- STEPS ---------------------#########################################
+----------------------------------------------------------------------------------------------------------------
+ 
+1.Activate Environment (If you created environment if not then move to direct 3rd step)
+    - Go to the Environment path and open Git Bash
+    - copy paste following : source Scripts/activate
+
+2. Sync Your Environment with your code base in Editer (In my case VS code)
+    - Open VS Code and open your project folder
+    - Install the Python Extension in VS Code. (If not installed)
+    - Press Ctrl+Shift+P → Type Python: Select Interpreter → Choose the virtual environment (your created environment).
+
+3. Run the code (in this case used FLASK Server)
+    - if you imported Flask server in your api/server file (C:\Users\Kishor\ML_PROJECTS\ML_PROJECT_2_RESTAURENT\server) then do following in your api folder 
+        - just run the file and you get the url in terminal like : "http://127.0.0.1:5000" 
+
+4.Check your API in Postman 
+    - Paste url (http://127.0.0.1:5000) in postman and pass form data as required in api (in this case "file") 
+
+5.Check Frontend Part (If frontend part is done)
+    - Go to your frontend(client) folder (C:\Users\Kishor\ML_PROJECTS\ML_PROJECT_2_RESTAURENT\client)
+    - Click on html file(app.html)
