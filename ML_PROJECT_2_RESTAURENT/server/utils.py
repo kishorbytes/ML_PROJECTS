@@ -53,3 +53,4 @@ def get_data_columns():
 if __name__== "__main__":
     load_saved_artifacts()
     print(predict_monthly_revenue(58,36.50,4.5,'mexican'))
+    print(get_cuisine_type())
